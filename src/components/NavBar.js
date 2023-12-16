@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import theme from "@material-tailwind/react/context/theme";
 import {
   Navbar,
   MobileNav,
@@ -18,6 +19,8 @@ export default function NavBar() {
       () => window.innerWidth >= 960 && setOpenNav(false)
     );
   }, []);
+
+  console.log(theme);
 
   const navList = (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
@@ -113,6 +116,7 @@ export default function NavBar() {
               </svg>
             )}
           </IconButton>
+          <Button>hello</Button>
         </div>
       </div>
       <MobileNav open={openNav}>{navList}</MobileNav>
