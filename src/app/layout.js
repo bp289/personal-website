@@ -1,30 +1,64 @@
 "use client";
-import { Inter } from "next/font/google";
 import Navbar from "../components/NavBar";
 import "./globals.css";
 
-import { button, ThemeProvider } from "@material-tailwind/react";
-const inter = Inter({ subsets: ["latin"] });
+import { ThemeProvider } from "@material-tailwind/react";
+import { useEffect, useState } from "react";
+import { lightTheme, darkTheme } from "@/utils/themes";
 
-const theme = {
-  button: {
-    defaultProps: {
-      variant: "outlined",
-    },
-  },
-};
 export default function RootLayout({ children }) {
+  const [darkMode, setDarkMode] = useState(true);
+
+  const handleTheme = () => {
+    localStorage.setItem("darkMode", !darkMode);
+    setDarkMode(!darkMode);
+  };
+
+  const backGround = darkMode ? "bg-gray-900" : "bg-blue-gray-50";
+
+  useEffect(() => {
+    const darkModeInStorage = localStorage.getItem("darkMode");
+    if (darkModeInStorage) {
+      setDarkMode(darkModeInStorage === "true" ? true : false);
+    }
+  }, []);
+
   return (
     <html
-      className="-m-6 max-h-[768px] w-[calc(100%+48px)] overflow-scroll"
+      className="max-h-[1000px] h-full w-[calc(100%+48px)] overflow-scroll"
       lang="en"
     >
-      <body className={inter.className}>
-        <ThemeProvider value={theme}>
-          <Navbar />
+      <body className={`${backGround} h-full w-full`}>
+        <ThemeProvider value={darkMode ? darkTheme : lightTheme}>
+          <Navbar darkMode={darkMode} onToggleTheme={handleTheme} />
           {children}
         </ThemeProvider>
       </body>
     </html>
   );
 }
+
+const theme = {
+  navbar: {
+    styles: {
+      base: {
+        navbar: {
+          initial: {
+            display: "block",
+            width: "w-full",
+            maxWidth: "max-w-screen-2xl",
+            borderRadius: "rounded-xl",
+            py: "py-4",
+            px: "px-8",
+          },
+        },
+        mobileNav: {
+          display: "block",
+          width: "w-full",
+          basis: "basis-full",
+          overflow: "overflow-hidden",
+        },
+      },
+    },
+  },
+};
