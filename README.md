@@ -2,8 +2,11 @@ This is my personal portfolio built using Next.js,
 Please feel free to fork this repo and use it as a base for your portfolio.
 
 ## Getting Started
-
-First, run the development server:
+First, install the dependencies:
+```
+npm install
+```
+Run the development server:
 
 ```bash
 npm run dev
@@ -16,5 +19,3 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
