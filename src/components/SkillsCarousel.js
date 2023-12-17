@@ -1,15 +1,39 @@
 "use client";
-import { Carousel } from "@material-tailwind/react";
+import { Carousel, Button, IconButton } from "@material-tailwind/react";
 import Image from "next/image";
+
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
+
 export function SkillsCarousel() {
   return (
     <Carousel
-      className="rounded-xl px-auto"
       autoplay={true}
       autoplayDelay={3000}
       loop={true}
       navigation={() => <></>}
-      transition={{ type: "tween", duration: 0.3 }}
+      className="rounded-xl"
+      prevArrow={({ handlePrev }) => (
+        <Button
+          variant="text"
+          size="lg"
+          ripple={false}
+          onClick={handlePrev}
+          className="!absolute top-2/4 left-1 -translate-y-2/4  hover:bg-transparent active:bg-transparent"
+        >
+          <ChevronLeftIcon className="h-6 w-6" />
+        </Button>
+      )}
+      nextArrow={({ handleNext }) => (
+        <Button
+          variant="text"
+          size="lg"
+          ripple={false}
+          onClick={handleNext}
+          className="!absolute top-2/4 !right-1 -translate-y-2/4 hover:bg-transparent active:bg-transparent "
+        >
+          <ChevronRightIcon className="h-6 w-6" />
+        </Button>
+      )}
     >
       <Image
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg"
