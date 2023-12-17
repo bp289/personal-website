@@ -20,12 +20,6 @@ export const lightTheme = {
       },
     },
   },
-  navbar: {
-    defaultProps: {
-      variant: "filled",
-      color: "transparent",
-    },
-  },
   typography: {
     defaultProps: {
       color: "black",
@@ -59,13 +53,6 @@ export const darkTheme = {
       base: {
         hover: "hover:bg-gray-800",
       },
-    },
-  },
-  navbar: {
-    defaultProps: {
-      variant: "filled",
-      color: "transparent",
-      className: "bg-black",
     },
   },
   typography: {

@@ -16,7 +16,7 @@ import {
   Button,
 } from "@material-tailwind/react";
 
-export default function NavBar({ onToggleTheme, darkMode }) {
+export default function NavBar({ onToggleTheme, darkMode, backGround }) {
   const [openNav, setOpenNav] = React.useState(false);
 
   React.useEffect(() => {
@@ -53,9 +53,9 @@ export default function NavBar({ onToggleTheme, darkMode }) {
 
   return (
     <Navbar
-      className={`sticky top-0 z-10 h-max border-b-4 ${
+      className={`sticky top-0 z-10 h-max border-b-4 border-t-0 border-x-0 ${
         darkMode ? "border-blue-gray-50" : "border-gray-800"
-      } rounded-none w-full max-w-[100%] text-white`}
+      } rounded-none w-full max-w-[100%] text-white ${backGround}`}
     >
       <div className=" max-w-screen-2xl mx-auto">
         <div className="flex items-center justify-between text-blue-gray-900">

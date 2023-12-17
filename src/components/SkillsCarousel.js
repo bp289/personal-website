@@ -6,7 +6,6 @@ export function SkillsCarousel() {
     <Carousel
       className="rounded-xl px-auto"
       autoplay={true}
-      randomize={true}
       autoplayDelay={3000}
       loop={true}
       navigation={() => <></>}
