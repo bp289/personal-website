@@ -30,14 +30,17 @@ export function GenericCarousel({ autoplay, autoplayDelay, loop, images }) {
           <ChevronRightIcon className="h-6 w-6" />
         </Button>
       )}>
-      {images?.map((image) => {
-        <Image
-          src={image}
-          alt="projects"
-          width="500"
-          height="500"
-          className="object-cover"
-        />;
+      {images.map((image) => {
+        return (
+          <Image
+            key={image}
+            src={image}
+            alt="projects"
+            width="200"
+            height="200"
+            className="object-contain mx-auto"
+          />
+        );
       })}
     </Carousel>
   );
