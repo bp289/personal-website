@@ -28,26 +28,29 @@ export default function NavBar({ onToggleTheme, darkMode, backGround }) {
 
   const navList = (
     <ul className="navlist">
-      <Button as="li" variant="text" className="p-3 font-normal h-full ">
-        <Link href="#" className="flex items-center">
-          Skills
-        </Link>
-      </Button>
-      <Button as="li" variant="text">
-        <Link href="#" className="flex items-center">
+      <Link href="/projects">
+        <Button as="li" variant="text">
           Projects
-        </Link>
-      </Button>
-      <Button as="li" variant="text">
-        <Link href="#" className="flex items-center">
+        </Button>
+      </Link>
+
+      <Link href="/skills">
+        <Button as="li" variant="text" className="p-12">
+          Skills
+        </Button>
+      </Link>
+
+      <Link href="/experience">
+        <Button as="li" variant="text">
           Experience
-        </Link>
-      </Button>
-      <Button as="li" variant="text">
-        <Link href="#" className="flex items-center">
+        </Button>
+      </Link>
+
+      <Link href="/education">
+        <Button as="li" variant="text">
           Education
-        </Link>
-      </Button>
+        </Button>
+      </Link>
     </ul>
   );
 

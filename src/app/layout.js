@@ -40,28 +40,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-
-const theme = {
-  navbar: {
-    styles: {
-      base: {
-        navbar: {
-          initial: {
-            display: "block",
-            width: "w-full",
-            maxWidth: "max-w-screen-2xl",
-            borderRadius: "rounded-xl",
-            py: "py-4",
-            px: "px-8",
-          },
-        },
-        mobileNav: {
-          display: "block",
-          width: "w-full",
-          basis: "basis-full",
-          overflow: "overflow-hidden",
-        },
-      },
-    },
-  },
-};

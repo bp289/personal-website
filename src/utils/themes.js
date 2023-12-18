@@ -1,4 +1,5 @@
 export const lightTheme = {
+  name: "light",
   button: {
     defaultProps: {
       color: "black",
@@ -32,8 +33,16 @@ export const lightTheme = {
       },
     },
   },
+  card: {
+    styles: {
+      base: {
+        bg: "bg-[#141414]",
+      },
+    },
+  },
 };
 export const darkTheme = {
+  name: "dark",
   button: {
     defaultProps: {
       variant: "filled",
@@ -42,7 +51,7 @@ export const darkTheme = {
     styles: {
       base: {
         initial: {
-          hover: "hover:bg-gray-400",
+          hover: "hover:bg-gray-900",
         },
       },
     },
@@ -58,6 +67,18 @@ export const darkTheme = {
   typography: {
     defaultProps: {
       color: "white",
+    },
+  },
+
+  card: {
+    defaultProps: {
+      styles: {
+        base: {
+          initial: {
+            flex: "!bg-red-400",
+          },
+        },
+      },
     },
   },
 };
