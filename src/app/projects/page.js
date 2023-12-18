@@ -2,14 +2,7 @@
 
 import "../globals.css";
 
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Typography,
-  Tooltip,
-} from "@material-tailwind/react";
+import { Typography } from "@material-tailwind/react";
 import { ProjectCard } from "@/components/ProjectCard";
 
 export default function Projects({ darkMode }) {
@@ -20,7 +13,16 @@ export default function Projects({ darkMode }) {
           Projects
         </Typography>
         <div>
-          <ProjectCard />
+          <ProjectCard
+            title="Elden Ring wiki app"
+            skills={["TypeScript", "Node", "React"]}>
+            A sleek mobile wiki for the game Elden Ring.Data gathered from a
+            public API. All information is neatly categorized, making it easy to
+            browse. and also a search feature to assist in finding what
+            {" you're "}
+            looking for. If you find things you want to go back to, the
+            bookmarks feature comes in very handy.
+          </ProjectCard>
         </div>
       </div>
     </main>

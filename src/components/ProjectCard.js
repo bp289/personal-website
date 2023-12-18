@@ -3,65 +3,49 @@ import {
   CardHeader,
   CardBody,
   CardFooter,
-  Typography,
   Avatar,
   Tooltip,
-  Chip,
-  Accordion,
-  AccordionBody,
-  AccordionHeader,
 } from "@material-tailwind/react";
-
+import { skillsLinks } from "@/utils/skillIcons";
 import { clsx } from "clsx";
-import { useState } from "react";
-import { SkillsCarousel } from "./SkillsCarousel";
+import Image from "next/image";
 
 import { useTheme } from "@material-tailwind/react";
 import { GenericCarousel } from "./ProjectsCarousel";
+import { ProjectAccordion } from "./ProjectAccordion";
 
 export function ProjectCard({ title, skills, children }) {
-  const [open, setOpen] = useState(false);
-
   const { name } = useTheme();
 
-  console.log(name);
   return (
     <Card
       className={clsx("w-[24rem] overflow-hidden shadow-md", {
         "bg-blue-gray-100": name === "light",
         "bg-[#171717]": name === "dark",
-      })}
-    >
+      })}>
       <CardHeader
         color=""
-        className="m-0 bg-transparent rounded-none shadow-none "
-      >
+        className="m-0 bg-transparent rounded-none shadow-none ">
         <GenericCarousel />
       </CardHeader>
       <CardBody className="bg-transparent">
-        <Accordion open={open}>
-          <AccordionHeader
-            className={clsx({
-              "border-b-white": name === "dark",
-              "border-b-gray-900": name === "light",
-            })}
-            onClick={() => setOpen((prev) => !prev)}
-          >
-            <Typography variant="h6" className="w-full flex flex-row">
-              {title}
-            </Typography>
-          </AccordionHeader>
-          <AccordionBody className="w-[100%] flex flex-row">
-            <Typography variant="paragraph"></Typography>
-          </AccordionBody>
-        </Accordion>
+        <ProjectAccordion title={title} skills={skills} themeName={name}>
+          {children}
+        </ProjectAccordion>
       </CardBody>
-      <CardFooter className="flex items-center justify-between">
-        <div className="flex items-center -space-x-3">
-          {skills?.map((skill) => (
-            <Chip key={skill} value={skill} />
-          ))}
-        </div>
+      <CardFooter className="flex items-center gap-2 justify-start">
+        {skills?.map((skill) => (
+          <Tooltip
+            key={skill}
+            content={skill}
+            className={clsx("shadow-md", {
+              "bg-[#171717] text-white": name === "light",
+              "bg-blue-gray-100 text-black": name === "dark",
+            })}
+            placement="bottom">
+            <Avatar alt={skill} variant="square" src={skillsLinks[skill]} />
+          </Tooltip>
+        ))}
       </CardFooter>
     </Card>
   );

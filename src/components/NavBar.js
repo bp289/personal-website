@@ -34,11 +34,11 @@ export default function NavBar({ onToggleTheme, darkMode, backGround }) {
         </Button>
       </Link>
 
-      <Link href="/skills">
+      {/* <Link href="/skills">
         <Button as="li" variant="text" className="p-12">
           Skills
         </Button>
-      </Link>
+      </Link> */}
 
       <Link href="/experience">
         <Button as="li" variant="text">
@@ -58,11 +58,10 @@ export default function NavBar({ onToggleTheme, darkMode, backGround }) {
     <Navbar
       className={`sticky top-0 z-10 h-max border-b-4 border-t-0 border-x-0 ${
         darkMode ? "border-blue-gray-50" : "border-gray-800"
-      } rounded-none w-full max-w-[100%] text-white ${backGround}`}
-    >
+      } rounded-none w-full max-w-[100%] text-white ${backGround}`}>
       <div className=" max-w-screen-2xl mx-auto">
         <div className="flex items-center justify-between text-blue-gray-900">
-          <Typography className="mr-4 cursor-pointer py-1.5 font-medium ">
+          <Typography className="mr-4 cursor-pointer py-1.5 text-3xl font-bold">
             <Link href="/">Biraj Pantha</Link>
           </Typography>
           <div className="flex items-center gap-4">
@@ -77,8 +76,7 @@ export default function NavBar({ onToggleTheme, darkMode, backGround }) {
             <IconButton
               className="p-2 lg:hidden"
               ripple={false}
-              onClick={() => setOpenNav(!openNav)}
-            >
+              onClick={() => setOpenNav(!openNav)}>
               {openNav ? (
                 <XMarkIcon className="h-6 w-6" />
               ) : (
