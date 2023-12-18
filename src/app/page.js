@@ -18,11 +18,13 @@ export default function Home({ darkMode }) {
 
       <div className="flex h-full flex-col items-start">
         <div className="flex flex-col lg:flex-row">
-          <div className="flex gap-6 flex-col items-start justify-center">
-            <Typography variant="h1" className="text-9xl">
+          <div className="flex gap-6 flex-col  md:items-start justify-center">
+            <Typography variant="h1" className=" text-5xl md:text-9xl  ml-8">
               Biraj Pantha
             </Typography>
-            <Typography variant="paragraph" className="text-2xl font-light">
+            <Typography
+              variant="paragraph"
+              className="text-xl font-light ml-8 mr-5 mb-20">
               <mark className="text-inherit font-bold bg-transparent block mb-2">
                 Hello & welcome to my website!
               </mark>{" "}
