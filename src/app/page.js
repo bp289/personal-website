@@ -22,11 +22,19 @@ export default function Home({ darkMode }) {
             <Typography variant="h1" className="text-9xl">
               Biraj Pantha
             </Typography>
-            <Typography variant="paragraph" className="text-4xl font-light">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Corrupti, rerum. Debitis accusantium deleniti enim iste
-              dignissimos? Similique, exercitationem! Odit vero, numquam quae
-              ratione maxime sunt reiciendis laudantium quaerat iure ipsum!
+            <Typography variant="paragraph" className="text-2xl font-light">
+              <mark className="text-inherit font-bold bg-transparent block mb-2">
+                Hello & welcome to my website!
+              </mark>{" "}
+              Im Biraj, a Software engineer based in the UK. If you could
+              describe me with 1 word it would be{" "}
+              <mark className="text-inherit font-bold bg-transparent">
+                {"Inquisitive"},
+              </mark>{" "}
+              I love learning new technologies and seeing how I can apply them.
+              Im adept with all things JavaScript, TypeScript and Node.js but
+              Ive also got an array of other skills to complement too! As of now
+              I have just over a year of commercial Experience in the field.
             </Typography>
           </div>
           <SkillsCarousel />

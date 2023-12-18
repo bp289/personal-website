@@ -12,10 +12,11 @@ export default function Projects({ darkMode }) {
         <Typography variant="h1" className="text-7xl">
           Projects
         </Typography>
-        <div>
+        <div className="flex my-auto gap-2">
           <ProjectCard
             title="Elden Ring wiki app"
-            skills={["TypeScript", "Node", "React"]}>
+            skills={["TypeScript", "Node", "React"]}
+            images={[""]}>
             A sleek mobile wiki for the game Elden Ring.Data gathered from a
             public API. All information is neatly categorized, making it easy to
             browse. and also a search feature to assist in finding what

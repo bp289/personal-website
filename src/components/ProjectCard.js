@@ -8,13 +8,12 @@ import {
 } from "@material-tailwind/react";
 import { skillsLinks } from "@/utils/skillIcons";
 import { clsx } from "clsx";
-import Image from "next/image";
 
 import { useTheme } from "@material-tailwind/react";
-import { GenericCarousel } from "./ProjectsCarousel";
+import { GenericCarousel } from "./GenericCarousel";
 import { ProjectAccordion } from "./ProjectAccordion";
 
-export function ProjectCard({ title, skills, children }) {
+export function ProjectCard({ title, skills, children, images }) {
   const { name } = useTheme();
 
   return (
@@ -23,10 +22,8 @@ export function ProjectCard({ title, skills, children }) {
         "bg-blue-gray-100": name === "light",
         "bg-[#171717]": name === "dark",
       })}>
-      <CardHeader
-        color=""
-        className="m-0 bg-transparent rounded-none shadow-none ">
-        <GenericCarousel />
+      <CardHeader className="m-0 bg-transparent rounded-none shadow-none ">
+        <GenericCarousel images={images} />
       </CardHeader>
       <CardBody className="bg-transparent">
         <ProjectAccordion title={title} skills={skills} themeName={name}>
