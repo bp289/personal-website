@@ -7,9 +7,9 @@ import { SkillsCarousel } from "@/components/SkillsCarousel";
 import { Typography } from "@material-tailwind/react";
 export default function Home({ darkMode }) {
   return (
-    <main className="h-full max-h-[500px] mt-[10rem] max-w-screen-2xl text-white mx-auto">
+    <main className="h-full lg:max-h-[500px] mt-[2rem] max-w-screen-2xl text-white mx-auto">
       <Image
-        className="rounded-full mx-auto mt-[8em] my-[5rem]"
+        className="rounded-full mx-auto mb-[4rem]"
         src="/Profile.jpg"
         alt="profile"
         width="300"
