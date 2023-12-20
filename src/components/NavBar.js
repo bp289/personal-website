@@ -58,15 +58,26 @@ export default function NavBar({ onToggleTheme, darkMode, backGround }) {
     <Navbar
       className={`sticky top-0 z-10 h-max border-b-4 border-t-0 border-x-0 ${
         darkMode ? "border-blue-gray-50" : "border-gray-800"
-      } rounded-none w-full max-w-[100%] text-white ${backGround}`}>
+      } rounded-none w-full max-w-[100%] text-white ${backGround}`}
+    >
       <div className=" max-w-screen-2xl mx-auto">
         <div className="flex items-center justify-between text-blue-gray-900">
-          <Typography className="mr-4 cursor-pointer py-1.5 text-3xl font-bold">
+          <Typography
+            variant="h1"
+            className="mr-4 cursor-pointer py-1.5 text-3xl font-bold"
+          >
             <Link href="/">Biraj Pantha</Link>
           </Typography>
           <div className="flex items-center gap-4">
             <div className="mr-4 hidden lg:block">{navList}</div>
-            <Button className="p-2" onClick={onToggleTheme} variant="text">
+
+            <Button
+              aria-label="toggle dark mode"
+              className="p-2"
+              id="darkMode"
+              onClick={onToggleTheme}
+              variant="text"
+            >
               {darkMode ? (
                 <SunIcon className="h-6 w-6" />
               ) : (
@@ -74,9 +85,11 @@ export default function NavBar({ onToggleTheme, darkMode, backGround }) {
               )}
             </Button>
             <IconButton
+              aria-label="open nav"
               className="p-2 lg:hidden"
               ripple={false}
-              onClick={() => setOpenNav(!openNav)}>
+              onClick={() => setOpenNav(!openNav)}
+            >
               {openNav ? (
                 <XMarkIcon className="h-6 w-6" />
               ) : (

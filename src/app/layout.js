@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
     setDarkMode(!darkMode);
   };
 
-  const backGround = darkMode ? "bg-gray-900" : "bg-blue-gray-50";
+  const backGround = darkMode ? "bg-gray-900" : "bg-indigo-50";
 
   const text = darkMode ? "text-orange-900" : "text-gray-900";
 

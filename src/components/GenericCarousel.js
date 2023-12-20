@@ -1,10 +1,19 @@
 "use client";
-import { Carousel, Button, IconButton } from "@material-tailwind/react";
+import { Carousel, Button } from "@material-tailwind/react";
 import Image from "next/image";
+import { clsx } from "clsx";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
-
-export function GenericCarousel({ autoplay, autoplayDelay, loop, images }) {
+export function GenericCarousel({
+  autoplay,
+  autoplayDelay,
+  loop,
+  images,
+  imageClass,
+  imageHeight,
+  imageWidth,
+  chevronColor,
+}) {
   return (
     <Carousel
       autoplay={autoplay || true}
@@ -16,8 +25,14 @@ export function GenericCarousel({ autoplay, autoplayDelay, loop, images }) {
           size="lg"
           ripple={false}
           onClick={handlePrev}
-          className="!absolute top-2/4 left-1 -translate-y-2/4  hover:bg-transparent active:bg-transparent">
-          <ChevronLeftIcon className="h-6 w-6" />
+          className="!absolute top-2/4 left-1 -translate-y-2/4  hover:bg-transparent active:bg-transparent"
+        >
+          <ChevronLeftIcon
+            className={clsx("h-6 w-6 transition ", {
+              "text-black": chevronColor == "black",
+              "text-white": chevronColor == "white",
+            })}
+          />
         </Button>
       )}
       nextArrow={({ handleNext }) => (
@@ -26,19 +41,26 @@ export function GenericCarousel({ autoplay, autoplayDelay, loop, images }) {
           size="lg"
           ripple={false}
           onClick={handleNext}
-          className="!absolute top-2/4 !right-1 -translate-y-2/4 hover:bg-transparent active:bg-transparent ">
-          <ChevronRightIcon className="h-6 w-6" />
+          className="!absolute top-2/4 !right-1 -translate-y-2/4 hover:bg-transparent active:bg-transparent "
+        >
+          <ChevronRightIcon
+            className={clsx("h-6 w-6 transition ", {
+              "text-black": chevronColor == "black",
+              "text-white": chevronColor == "white",
+            })}
+          />
         </Button>
-      )}>
+      )}
+    >
       {images.map((image) => {
         return (
           <Image
             key={image}
             src={image}
             alt="projects"
-            width="200"
-            height="200"
-            className="object-contain mx-auto"
+            width={imageWidth}
+            height={imageHeight}
+            className={imageClass}
           />
         );
       })}

@@ -12,24 +12,49 @@ const EldenRing = Array(6)
     return `${ssLink}/EldenRing/ER${index + 1}.png`;
   });
 
+const Ecomm = Array(6)
+  .fill("")
+  .map((image, index) => {
+    return `${ssLink}/Ecomm/Ecomm${index + 1}.png`;
+  });
+
 export default function Projects({ darkMode }) {
   return (
-    <main className="h-full max-h-[500px] mt-[7rem] max-w-screen-2xl text-white mx-auto">
-      <div className="flex h-full flex-col items-start">
+    <main className="h-full max-h-[500px] mt-[2rem] max-w-screen-2xl text-white md:mx-auto">
+      <div className="flex h-full flex-col items-center md:items-start">
         <Typography variant="h1" className="text-7xl">
           Projects
         </Typography>
-        <div className="flex mt-20 gap-2">
+        <div className="flex flex-wrap justify-center mt-20 gap-20">
           <ProjectCard
+            imageClassName="mx-auto object-contain"
             title="Elden Ring wiki app"
             skills={["TypeScript", "Node", "React"]}
-            images={EldenRing}>
+            imageWidth="200"
+            imageHeight="200"
+            images={EldenRing}
+          >
             A sleek mobile wiki for the game Elden Ring.Data gathered from a
             public API. All information is neatly categorized, making it easy to
             browse. and also a search feature to assist in finding what
             {" you're "}
             looking for. If you find things you want to go back to, the
             bookmarks feature comes in very handy.
+          </ProjectCard>
+
+          <ProjectCard
+            chevronColor="black"
+            title="Ecommerce app"
+            imageWidth="500"
+            imageHeight="500"
+            skills={["TypeScript", "Node", "Laravel", "Tailwind"]}
+            imageClassName="object-contain"
+            images={Ecomm}
+          >
+            <Typography variant="paragraph">(work in progress)</Typography> A
+            recent project i was working on to get get experience with the
+            laravel backend framework. features several features such as
+            login/logout, search through
           </ProjectCard>
         </div>
       </div>

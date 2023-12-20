@@ -20,18 +20,19 @@ export function SkillsCarousel() {
           onClick={handlePrev}
           className="!absolute top-2/4 left-1 -translate-y-2/4  hover:bg-transparent active:bg-transparent"
         >
-          <ChevronLeftIcon className="h-6 w-6" />
+          <ChevronLeftIcon aria-hidden="false" className="h-6 w-6" />
         </Button>
       )}
       nextArrow={({ handleNext }) => (
         <Button
+          aria-hidden="false"
           variant="text"
           size="lg"
           ripple={false}
           onClick={handleNext}
           className="!absolute top-2/4 !right-1 -translate-y-2/4 hover:bg-transparent active:bg-transparent "
         >
-          <ChevronRightIcon className="h-6 w-6" />
+          <ChevronRightIcon aria-hidden="false" className="h-6 w-6" />
         </Button>
       )}
     >
