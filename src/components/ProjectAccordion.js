@@ -18,21 +18,20 @@ export function ProjectAccordion({ title, themeName, children }) {
       <AccordionHeader
         className={clsx({
           "border-b-white": themeName === "dark",
-          "border-b-gray-900": themeName === "light",
+          "border-b-gray-900 ": themeName === "light",
         })}
         onClick={() => setOpen((prev) => !prev)}
       >
-        <Typography
-          variant="h6"
-          className="w-full flex flex-row justify-between"
-        >
+        <Typography variant="h6" className="w-full">
           {title}
-          <ChevronUpIcon
-            className={clsx("h-6 w-6 transition ", {
-              "rotate-180": open,
-            })}
-          />
         </Typography>
+        <ChevronUpIcon
+          className={clsx("h-6 w-6 transition duration-0", {
+            "rotate-180": open,
+            "text-white": themeName === "dark",
+            "text-black": themeName === "light",
+          })}
+        />
       </AccordionHeader>
       <AccordionBody className="w-[100%] flex flex-row">
         <Typography variant="paragraph">{children}</Typography>

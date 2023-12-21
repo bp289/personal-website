@@ -10,6 +10,7 @@ import { Typography, Tooltip, useTheme } from "@material-tailwind/react";
 
 const linkedin = "https://www.linkedin.com/in/biraj-pantha/";
 const github = "https://github.com/bp289";
+
 export default function Home({ darkMode }) {
   const { name } = useTheme();
   return (
@@ -29,21 +30,25 @@ export default function Home({ darkMode }) {
         <div className="flex h-full flex-col items-start">
           <div className="flex flex-col lg:flex-row">
             <div className="flex gap-6 flex-col  md:items-start justify-center">
-              <Typography variant="h1" className=" text-5xl md:text-9xl  ml-8">
+              <Typography
+                variant="h1"
+                aria-label="mark"
+                className=" text-5xl md:text-9xl  ml-8"
+              >
                 Biraj Pantha
               </Typography>
               <Typography
                 variant="paragraph"
                 className="text-xl font-light ml-8 mr-5 mb-20"
               >
-                <mark className="text-inherit font-bold bg-transparent block mb-2">
+                <Typography className="font-bold text-xl bg-transparent block mb-2">
                   Hello & welcome to my website!
-                </mark>{" "}
+                </Typography>
                 Im Biraj, a Software engineer based in the UK. If you could
-                describe me with 1 word it would be{" "}
-                <mark className="text-inherit font-bold bg-transparent">
-                  {"Inquisitive"},
-                </mark>{" "}
+                describe me with one word it would be{" "}
+                <Typography className="text-xl inline font-bold bg-transparent">
+                  {'"Inquisitive"'}.
+                </Typography>{" "}
                 I love learning new technologies and seeing how I can apply
                 them. Im adept with all things JavaScript, TypeScript and
                 Node.js but Ive also got an array of other skills to complement

@@ -62,12 +62,14 @@ export default function NavBar({ onToggleTheme, darkMode, backGround }) {
     >
       <div className=" max-w-screen-2xl mx-auto">
         <div className="flex items-center justify-between text-blue-gray-900">
-          <Typography
-            variant="h1"
-            className="mr-4 cursor-pointer py-1.5 text-xl lg:text-3xl font-bold"
-          >
-            <Link href="/">Biraj Pantha</Link>
-          </Typography>
+          <Link href="/">
+            <Typography
+              variant="h1"
+              className="mr-4 cursor-pointer py-1.5 text-xl lg:text-3xl font-bold"
+            >
+              Biraj Pantha
+            </Typography>
+          </Link>
           <div className="flex items-center gap-4">
             <div className="mr-4 hidden lg:block">{navList}</div>
 
