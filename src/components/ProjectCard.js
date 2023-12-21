@@ -27,7 +27,7 @@ export function ProjectCard({
 
   return (
     <Card
-      className={clsx("w-[24rem] shadow-md  h-[30rem] ", {
+      className={clsx("w-[24rem] shadow-md overflow-hidden h-[30rem] ", {
         "bg-indigo-100": name === "light",
         "bg-[#171717]": name === "dark",
       })}

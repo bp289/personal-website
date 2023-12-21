@@ -53,7 +53,6 @@ export default function Projects({ darkMode }) {
               imageWidth="500"
               imageHeight="500"
               skills={["TypeScript", "Node", "Laravel", "Tailwind"]}
-              imageClassName="object-contain"
               images={Ecomm}
             >
               <Typography variant="paragraph">(work in progress)</Typography> A

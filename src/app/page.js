@@ -58,7 +58,15 @@ export default function Home({ darkMode }) {
             </div>
             <SkillsCarousel />
           </div>
-          <div className="flex justify-start items-center gap-4 mx-8 mt-20 md:mt-2 p-3 bg-indigo-100 rounded-full">
+          <div
+            className={clsx(
+              "flex justify-start items-center gap-4 mx-8 mt-20 md:mt-2 p-3 rounded-full",
+              {
+                "bg-indigo-100": name === "dark",
+                "bg-gray-400": name === "light",
+              }
+            )}
+          >
             <Tooltip
               content={"my linkedIn profile"}
               className={clsx("shadow-md", {
