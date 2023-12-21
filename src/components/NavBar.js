@@ -56,7 +56,7 @@ export default function NavBar({ onToggleTheme, darkMode, backGround }) {
 
   return (
     <Navbar
-      className={`sticky top-0 z-10 h-max border-b-4 border-t-0 border-x-0 ${
+      className={`sticky top-0 z-10 py-2 border-b-4 h-fit border-t-0 border-x-0 ${
         darkMode ? "border-blue-gray-50" : "border-gray-800"
       } rounded-none w-full max-w-[100%] text-white ${backGround}`}
     >
@@ -64,7 +64,7 @@ export default function NavBar({ onToggleTheme, darkMode, backGround }) {
         <div className="flex items-center justify-between text-blue-gray-900">
           <Typography
             variant="h1"
-            className="mr-4 cursor-pointer py-1.5 text-3xl font-bold"
+            className="mr-4 cursor-pointer py-1.5 text-xl lg:text-3xl font-bold"
           >
             <Link href="/">Biraj Pantha</Link>
           </Typography>

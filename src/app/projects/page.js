@@ -21,11 +21,11 @@ const Ecomm = Array(6)
 export default function Projects({ darkMode }) {
   return (
     <main className="h-full max-h-[500px] mt-[2rem] max-w-screen-2xl text-white md:mx-auto">
-      <div className="flex h-full flex-col items-center md:items-start">
-        <Typography variant="h1" className="text-7xl">
+      <div className="flex h-full flex-col items-center marker lg:items-start md:ml-10 lg+:mx-0">
+        <Typography variant="h1" className="text-7xl ">
           Projects
         </Typography>
-        <div className="flex flex-wrap justify-center mt-20 gap-20">
+        <div className="flex flex-wrap justify-center min mt-20 gap-20">
           <ProjectCard
             imageClassName="mx-auto object-contain"
             title="Elden Ring wiki app"

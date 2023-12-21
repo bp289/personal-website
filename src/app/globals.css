@@ -22,8 +22,8 @@ body * {
 }
 
 .navlist {
-  @apply mt-2 mb-4 flex flex-col gap-2 
-      lg:py-0 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6
+  @apply flex flex-col gap-2 
+      py-0 mb-0 mt-0 lg:flex-row lg:items-center lg:gap-6
       [&>*]:[&>*]:text-base [&>*]:[&>*]:capitalize [&>*]:[&>*]:p-3 [&>*]:[&>*]:font-normal;
 }
 

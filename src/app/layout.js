@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
   }, []);
 
   return (
-    <html className="h-full w-[calc(100%+48px)]s overflow-scroll" lang="en">
+    <html className="h-full overflow-scroll" lang="en">
       <body className={`${backGround} h-full w-full [&>*]:${text} `}>
         <ThemeProvider value={darkMode ? darkTheme : lightTheme}>
           <Navbar

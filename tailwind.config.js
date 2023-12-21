@@ -8,6 +8,9 @@ module.exports = withMT({
   ],
   theme: {
     extend: {
+      screens: {
+        "lg+": "1312px",
+      },
       colors: {
         sky: {
           50: "#f0f9ff",
