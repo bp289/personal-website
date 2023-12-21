@@ -47,7 +47,7 @@ export default function Home({ darkMode }) {
                 I love learning new technologies and seeing how I can apply
                 them. Im adept with all things JavaScript, TypeScript and
                 Node.js but Ive also got an array of other skills to complement
-                too! As of nowz I have just over a year of commercial Experience
+                too! As of now I have just over a year of commercial Experience
                 in the field.
               </Typography>
             </div>

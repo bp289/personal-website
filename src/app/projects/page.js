@@ -58,8 +58,8 @@ export default function Projects({ darkMode }) {
             >
               <Typography variant="paragraph">(work in progress)</Typography> A
               recent project i was working on to get get experience with the
-              laravel backend framework. features several features such as
-              login/logout, search through
+              laravel backend framework. Comes with features such as
+              login/logout, search. Adding, deleting and updating listings.
             </ProjectCard>
           </div>
         </div>
