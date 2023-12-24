@@ -8,8 +8,7 @@ import Head from "next/head";
 import { SkillsCarousel } from "@/components/SkillsCarousel";
 import { Typography, Tooltip, useTheme } from "@material-tailwind/react";
 
-const linkedin = "https://www.linkedin.com/in/biraj-pantha/";
-const github = "https://github.com/bp289";
+import { linkedin, github } from "../utils/links";
 
 export default function Home({ darkMode }) {
   const { name } = useTheme();
