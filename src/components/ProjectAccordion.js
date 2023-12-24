@@ -5,7 +5,7 @@ import {
   AccordionHeader,
 } from "@material-tailwind/react";
 
-import { ChevronUpIcon } from "@heroicons/react/20/solid";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 import { clsx } from "clsx";
 import { useState } from "react";
@@ -25,7 +25,7 @@ export function ProjectAccordion({ title, themeName, children }) {
         <Typography variant="h6" className="w-full">
           {title}
         </Typography>
-        <ChevronUpIcon
+        <ChevronDownIcon
           className={clsx("h-6 w-6 transition duration-0", {
             "rotate-180": open,
             "text-white": themeName === "dark",

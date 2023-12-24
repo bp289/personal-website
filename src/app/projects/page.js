@@ -30,16 +30,16 @@ export default function Projects({ darkMode }) {
           <Typography variant="h1" className="text-7xl ">
             Projects
           </Typography>
-          <div className="flex flex-wrap justify-center min mt-20 gap-20">
+          <div className="flex flex-wrap justify-center mt-20 gap-20">
             <ProjectCard
-              imageClassName="mx-auto object-contain"
               title="Elden Ring wiki app"
               skills={["TypeScript", "Node", "React"]}
-              imageWidth="200"
-              imageHeight="200"
+              imageWidth="300"
+              imageHeight="300"
               images={EldenRing}
+              githubUrl={"https://github.com/bp289/EldenRingApp"}
             >
-              A sleek mobile wiki for the game Elden Ring.Data gathered from a
+              A sleek mobile wiki for the game Elden Ring. Data gathered from a
               public API. All information is neatly categorized, making it easy
               to browse. and also a search feature to assist in finding what
               {" you're "}
@@ -54,6 +54,7 @@ export default function Projects({ darkMode }) {
               imageHeight="500"
               skills={["TypeScript", "Node", "Laravel", "Tailwind"]}
               images={Ecomm}
+              githubUrl={"https://github.com/bp289/Ecommerce"}
             >
               <Typography variant="paragraph">(work in progress)</Typography> A
               recent project i was working on to get get experience with the

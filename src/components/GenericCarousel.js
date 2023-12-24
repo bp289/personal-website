@@ -9,7 +9,6 @@ export function GenericCarousel({
   autoplayDelay,
   loop,
   images,
-  imageClass,
   imageHeight,
   imageWidth,
   chevronColor,
@@ -60,7 +59,7 @@ export function GenericCarousel({
             alt="projects"
             width={imageWidth}
             height={imageHeight}
-            className={imageClass}
+            className="mx-auto object-contain h-[20rem]"
           />
         );
       })}

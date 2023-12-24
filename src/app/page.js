@@ -85,7 +85,7 @@ export default function Home({ darkMode }) {
               })}
               placement="top"
             >
-              <SocialIcon url={github} href={linkedin} />
+              <SocialIcon url={github} href={github} />
             </Tooltip>
           </div>
         </div>
