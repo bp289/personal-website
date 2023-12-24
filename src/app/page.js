@@ -15,9 +15,6 @@ export default function Home({ darkMode }) {
   const { name } = useTheme();
   return (
     <>
-      <Head>
-        <title>Biraj Pantha</title>
-      </Head>
       <main className="h-full lg:max-h-[500px] mt-[2rem] max-w-screen-2xl text-white mx-auto">
         <Image
           className="rounded-full mx-auto mb-[4rem]"
