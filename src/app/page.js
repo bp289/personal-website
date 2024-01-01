@@ -48,7 +48,7 @@ export default function Home({ darkMode }) {
                   <Highlight className="font-bold text-xl bg-transparent block mb-2">
                     Hello & welcome to my website!
                   </Highlight>
-                  Im Biraj, a Software engineer based in the UK. If you could
+                  Im Biraj, a software engineer based in the UK. If you could
                   describe me with one word it would be{" "}
                   <Highlight className="text-xl inline font-bold bg-transparent">
                     {'"Inquisitive"'}.
