@@ -4,7 +4,6 @@ import "./globals.css";
 import Image from "next/image";
 import { SocialIcon } from "react-social-icons";
 import { clsx } from "clsx";
-import Head from "next/head";
 import { SkillsCarousel } from "@/components/SkillsCarousel";
 import { Typography, Tooltip, useTheme } from "@material-tailwind/react";
 
@@ -29,14 +28,12 @@ export default function Home({ darkMode }) {
               <Typography
                 variant="h1"
                 aria-label="mark"
-                className=" text-5xl md:text-9xl  ml-8"
-              >
+                className=" text-5xl md:text-9xl  ml-8">
                 Biraj Pantha
               </Typography>
               <Typography
                 variant="paragraph"
-                className="text-xl font-light ml-8 mr-5 mb-20"
-              >
+                className="text-xl font-light ml-8 mr-5 mb-20">
                 <Typography className="font-bold text-xl bg-transparent block mb-2">
                   Hello & welcome to my website!
                 </Typography>
@@ -61,16 +58,14 @@ export default function Home({ darkMode }) {
                 "bg-indigo-100": name === "dark",
                 "bg-gray-400": name === "light",
               }
-            )}
-          >
+            )}>
             <Tooltip
               content={"my linkedIn profile"}
               className={clsx("shadow-md", {
                 "bg-[#171717] text-white": name === "light",
                 "bg-blue-gray-100 text-black": name === "dark",
               })}
-              placement="top"
-            >
+              placement="top">
               <SocialIcon url={linkedin} href={linkedin} />
             </Tooltip>
             <Tooltip
@@ -79,8 +74,7 @@ export default function Home({ darkMode }) {
                 "bg-[#171717] text-white": name === "light",
                 "bg-blue-gray-100 text-black": name === "dark",
               })}
-              placement="top"
-            >
+              placement="top">
               <SocialIcon url={github} href={github} />
             </Tooltip>
           </div>

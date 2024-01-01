@@ -14,6 +14,12 @@ const nextConfig = {
         port: "",
         pathname: "/gh/devicons/devicon/icons",
       },
+      {
+        protocol: "https",
+        hostname: "t3.gstatic.com",
+        port: "",
+        pathname: "/**",
+      },
     ],
   },
 };
