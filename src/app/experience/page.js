@@ -1,10 +1,7 @@
 "use client";
 import "../globals.css";
 import { Typography } from "@material-tailwind/react";
-import {
-  TransitionSide,
-  TransitionDown,
-} from "@/components/Experience/Transitions/transitions";
+import { TransitionDown } from "@/components/Experience/Transitions/transitions";
 
 import ExperienceTimeline from "@/components/Experience/ExperienceTimeline";
 export default function Experience({ darkMode }) {

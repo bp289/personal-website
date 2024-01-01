@@ -4,8 +4,13 @@ import { Timeline, Typography } from "@material-tailwind/react";
 import Experience from "./Experience.js";
 import ExperienceDescription from "./ExperieneDescription.js";
 import { TransitionSide } from "@/components/Experience/Transitions/transitions.js";
+import Highlight from "../Highlight.js";
+import { clsx } from "clsx";
+import { useTheme } from "@material-tailwind/react";
 
 const ExperienceTimeline = ({ experiences }) => {
+  const { name } = useTheme();
+
   return (
     <>
       <Timeline className="max-w-[45rem]">
@@ -60,7 +65,7 @@ const ExperienceTimeline = ({ experiences }) => {
 
               <div className="mt-10">
                 <Typography variant="paragraph">
-                  <span className="font-bold text-md">Skills: </span>
+                  <Highlight className="font-bold text-md">Skills: </Highlight>
                   Agile Methodologies · HTML5 · REST APIs · SQL · Cascading
                   Style Sheets (CSS) · Git · Cypress · Jest · TypeScript ·
                   Next.js · Server Side JavaScript · Fastify · Node.js ·
@@ -83,35 +88,40 @@ const ExperienceTimeline = ({ experiences }) => {
               <li className="italic font-bold">
                 <Typography>Full Stack Software Engineering:</Typography>
               </li>
-              <div className="ml-6">
-                <li>
-                  <Typography>
-                    Backend: Python, Fastify, MySQL, PostgreSQL, RESTful API
-                    development, Security fundamentals;
-                  </Typography>
-                </li>
-                <li>
-                  <Typography>
-                    Frontend: JavaScript, React, Next.js, CSS, Semantic HTML,
-                    CSS, Jest/React Testing Library;
-                  </Typography>
-                </li>
-              </div>
+
+              <li className="ml-6">
+                <Typography>
+                  Backend: Python, Fastify, MySQL, PostgreSQL, RESTful API
+                  development, Security fundamentals;
+                </Typography>
+              </li>
+              <li className="ml-6">
+                <Typography>
+                  Frontend: JavaScript, React, Next.js, CSS, Semantic HTML, CSS,
+                  Jest/React Testing Library;
+                </Typography>
+              </li>
+
               <li className="italic font-bold">
                 <Typography>Cloud Fundamentals: </Typography>
               </li>
-              <div className="ml-6">
-                <Typography> AWS, EC2, IAM, S3, Lambda; </Typography>
-              </div>
+
+              <Typography className="ml-6">
+                {" "}
+                AWS, EC2, IAM, S3, Lambda;{" "}
+              </Typography>
+
               <li className="italic font-bold">
                 <Typography>
                   Industry Best Practices & Delivery Methodologies:
                 </Typography>
               </li>
-              <div className="ml-6">
+
+              <Typography className="ml-6">
                 Agile, Test Driven Development (TDD), Pair Programming, Git,
                 OOP, Clean Code, DevOps;
-              </div>
+              </Typography>
+
               <li className="italic font-bold">
                 <Typography>Professional High-Performance Delivery:</Typography>
               </li>
@@ -126,7 +136,7 @@ const ExperienceTimeline = ({ experiences }) => {
 
               <div className="mt-10">
                 <Typography variant="paragraph">
-                  <span className="font-bold text-md">Skills: </span>
+                  <Highlight className="text-md">Skills: </Highlight>
                   Agile Methodologies · HTML5 · REST APIs · SQL · Cascading
                   Style Sheets (CSS) · Git · Cypress · Jest · TypeScript ·
                   Next.js · Server Side JavaScript · Fastify · Node.js ·
@@ -147,18 +157,18 @@ const ExperienceTimeline = ({ experiences }) => {
             <ExperienceDescription
               title="High-performance technology consultants across software, data,
                 and platform engineering.">
-              <li className="italic font-bold">
+              <li className="italic font-bold ">
                 {" "}
                 <Typography>Technical Excellence:</Typography>
               </li>
-              <div className="ml-6">
-                <li>
-                  <Typography>
-                    Problem solving, systems thinking, technical communication,
-                    effective & clean code;
-                  </Typography>
-                </li>
-              </div>
+
+              <li className="ml-6">
+                <Typography>
+                  Problem solving, systems thinking, technical communication,
+                  effective & clean code;
+                </Typography>
+              </li>
+
               <li className="italic font-bold">
                 <Typography>Professional High-Performance Delivery:</Typography>
               </li>
@@ -174,7 +184,7 @@ const ExperienceTimeline = ({ experiences }) => {
 
               <div className="mt-10">
                 <Typography variant="paragraph">
-                  <span className="font-bold text-md">Skills: </span>
+                  <Highlight className="font-bold">Skills: </Highlight>
                   Agile Methodologies · HTML5 · REST APIs · SQL · Cascading
                   Style Sheets (CSS) · Git · Cypress · Jest · TypeScript ·
                   Next.js · Server Side JavaScript · Fastify · Node.js ·

@@ -16,6 +16,7 @@ import {
   Typography,
   Avatar,
 } from "@material-tailwind/react";
+import Highlight from "../Highlight";
 const Experience = ({
   title,
   company,
@@ -41,7 +42,7 @@ const Experience = ({
 
           <Typography variant="h5">
             {company} - {title}{" "}
-            <span className="font-light italic">({dates})</span>
+            <Highlight className="font-light italic">{dates}</Highlight>
           </Typography>
         </TimelineHeader>
         <TimelineBody className="pb-8">{children}</TimelineBody>

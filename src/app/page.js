@@ -11,6 +11,8 @@ import {
   TransitionUp,
   TransitionSide,
 } from "@/components/Experience/Transitions/transitions";
+
+import Highlight from "@/components/Highlight";
 import { linkedin, github } from "../utils/links";
 
 export default function Home({ darkMode }) {
@@ -43,14 +45,14 @@ export default function Home({ darkMode }) {
                 <Typography
                   variant="paragraph"
                   className="text-xl font-light ml-8 mr-5 mb-20">
-                  <span className="font-bold text-xl bg-transparent block mb-2">
+                  <Highlight className="font-bold text-xl bg-transparent block mb-2">
                     Hello & welcome to my website!
-                  </span>
+                  </Highlight>
                   Im Biraj, a Software engineer based in the UK. If you could
                   describe me with one word it would be{" "}
-                  <span className="text-xl inline font-bold bg-transparent">
+                  <Highlight className="text-xl inline font-bold bg-transparent">
                     {'"Inquisitive"'}.
-                  </span>{" "}
+                  </Highlight>{" "}
                   I love learning new technologies and seeing how I can apply
                   them. Im adept with all things JavaScript, TypeScript and
                   Node.js but Ive also got an array of other skills to
