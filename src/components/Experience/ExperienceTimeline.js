@@ -3,149 +3,188 @@ import React from "react";
 import { Timeline, Typography } from "@material-tailwind/react";
 import Experience from "./Experience.js";
 import ExperienceDescription from "./ExperieneDescription.js";
+import { TransitionSide } from "@/components/Experience/Transitions/transitions.js";
 
 const ExperienceTimeline = ({ experiences }) => {
   return (
     <>
       <Timeline className="max-w-[45rem]">
-        <Experience
-          title="Junior Software Developer"
-          company="NearForm"
-          dates="Mar 2023 - Dec 2023"
-          url="https://www.nearform.com">
-          <ExperienceDescription title="Responsibilities and Expectations">
-            <Typography>
+        <TransitionSide delay={0.4}>
+          <Experience
+            title="Junior Software Developer"
+            company="NearForm"
+            dates="Mar 2023 - Dec 2023"
+            url="https://www.nearform.com">
+            <ExperienceDescription title="Responsibilities and Expectations">
               <li>
-                Develop production-ready code and work on technical tasks
-                individually and in a team.
-              </li>
-              <li>Optimize performance in applications.</li>
-              <li>
-                Use the debugging process and apply this to resolve issues.
+                <Typography>
+                  Develop production-ready code and work on technical tasks
+                  individually and in a team.
+                </Typography>
               </li>
               <li>
-                Interact and communicate with the project team, taking part in
-                any technical discussions.
+                {" "}
+                <Typography>Optimize performance in applications. </Typography>
               </li>
-              <li>Develop for open source.</li>
-              <li>Understand and call out non-functional requirements.</li>
-              <li>Create technical documentation.</li>
               <li>
-                Actively expand knowledge of new technologies and share it with
-                colleagues.
+                <Typography>
+                  Use the debugging process and apply this to resolve issues.
+                </Typography>
               </li>
-              <li>Participate in code reviews.</li>
-            </Typography>
+              <li>
+                <Typography>
+                  Interact and communicate with the project team, taking part in
+                  any technical discussions.
+                </Typography>
+              </li>
+              <li>
+                <Typography>Develop for open source.</Typography>
+              </li>
+              <li>
+                <Typography>
+                  Understand and call out non-functional requirements.
+                </Typography>
+              </li>
+              <li>
+                <Typography>Create technical documentation.</Typography>
+              </li>
+              <li>
+                <Typography>
+                  Actively expand knowledge of new technologies and share it
+                  with colleagues.
+                </Typography>
+              </li>
+              <li>
+                <Typography>Participate in code reviews.</Typography>
+              </li>
 
-            <div className="mt-10">
-              <Typography variant="paragraph">
-                <span className="font-bold text-md">Skills: </span>
-                Agile Methodologies · HTML5 · REST APIs · SQL · Cascading Style
-                Sheets (CSS) · Git · Cypress · Jest · TypeScript · Next.js ·
-                Server Side JavaScript · Fastify · Node.js · React.js · Scss ·
-                Amazon Web Services (AWS) · Google Cloud Platform (GCP) ·
-                GraphQL · React Native
-              </Typography>
-            </div>
-          </ExperienceDescription>
-        </Experience>
-        <Experience
-          title="Junior Software Engineer"
-          company="Sigma Labs"
-          dates="Feb 2023 - Present"
-          url="https://www.sigmalabs.co.uk">
-          <ExperienceDescription
-            title="High-performance technology consultants across software, data,
+              <div className="mt-10">
+                <Typography variant="paragraph">
+                  <span className="font-bold text-md">Skills: </span>
+                  Agile Methodologies · HTML5 · REST APIs · SQL · Cascading
+                  Style Sheets (CSS) · Git · Cypress · Jest · TypeScript ·
+                  Next.js · Server Side JavaScript · Fastify · Node.js ·
+                  React.js · Scss · Amazon Web Services (AWS) · Google Cloud
+                  Platform (GCP) · GraphQL · React Native
+                </Typography>
+              </div>
+            </ExperienceDescription>
+          </Experience>
+        </TransitionSide>
+        <TransitionSide delay={0.5}>
+          <Experience
+            title="Junior Software Engineer"
+            company="Sigma Labs"
+            dates="Feb 2023 - Present"
+            url="https://www.sigmalabs.co.uk">
+            <ExperienceDescription
+              title="High-performance technology consultants across software, data,
                 and platform engineering.">
-            <Typography>
               <li className="italic font-bold">
-                Full Stack Software Engineering:
+                <Typography>Full Stack Software Engineering:</Typography>
               </li>
               <div className="ml-6">
                 <li>
-                  Backend: Python, Fastify, MySQL, PostgreSQL, RESTful API
-                  development, Security fundamentals;
+                  <Typography>
+                    Backend: Python, Fastify, MySQL, PostgreSQL, RESTful API
+                    development, Security fundamentals;
+                  </Typography>
                 </li>
                 <li>
-                  Frontend: JavaScript, React, Next.js, CSS, Semantic HTML, CSS,
-                  Jest/React Testing Library;
+                  <Typography>
+                    Frontend: JavaScript, React, Next.js, CSS, Semantic HTML,
+                    CSS, Jest/React Testing Library;
+                  </Typography>
                 </li>
               </div>
-              <li className="italic font-bold">Cloud Fundamentals:</li>
+              <li className="italic font-bold">
+                <Typography>Cloud Fundamentals: </Typography>
+              </li>
               <div className="ml-6">
-                <p> AWS, EC2, IAM, S3, Lambda;</p>
+                <Typography> AWS, EC2, IAM, S3, Lambda; </Typography>
               </div>
               <li className="italic font-bold">
-                Industry Best Practices & Delivery Methodologies:
+                <Typography>
+                  Industry Best Practices & Delivery Methodologies:
+                </Typography>
               </li>
               <div className="ml-6">
                 Agile, Test Driven Development (TDD), Pair Programming, Git,
                 OOP, Clean Code, DevOps;
               </div>
               <li className="italic font-bold">
-                Professional High-Performance Delivery:
+                <Typography>Professional High-Performance Delivery:</Typography>
               </li>
               <ul>
                 <li>
-                  Problem solving & decision-making frameworks, business
-                  fundamentals & effective communication;
+                  <Typography>
+                    Problem solving & decision-making frameworks, business
+                    fundamentals & effective communication;
+                  </Typography>
                 </li>
               </ul>
-            </Typography>
 
-            <div className="mt-10">
-              <Typography variant="paragraph">
-                <span className="font-bold text-md">Skills: </span>
-                Agile Methodologies · HTML5 · REST APIs · SQL · Cascading Style
-                Sheets (CSS) · Git · Cypress · Jest · TypeScript · Next.js ·
-                Server Side JavaScript · Fastify · Node.js · React.js · Scss ·
-                Amazon Web Services (AWS) · Google Cloud Platform (GCP) ·
-                GraphQL · React Native
-              </Typography>
-            </div>
-          </ExperienceDescription>
-        </Experience>
-        <Experience
-          title="Trainee Data & Software Engineer"
-          company="Sigma Labs"
-          dates="Oct 2022 - Feb 2023"
-          url="https://www.sigmalabs.co.uk"
-          endOfTimeline={true}>
-          <ExperienceDescription
-            title="High-performance technology consultants across software, data,
+              <div className="mt-10">
+                <Typography variant="paragraph">
+                  <span className="font-bold text-md">Skills: </span>
+                  Agile Methodologies · HTML5 · REST APIs · SQL · Cascading
+                  Style Sheets (CSS) · Git · Cypress · Jest · TypeScript ·
+                  Next.js · Server Side JavaScript · Fastify · Node.js ·
+                  React.js · Scss · Amazon Web Services (AWS) · Google Cloud
+                  Platform (GCP) · GraphQL · React Native
+                </Typography>
+              </div>
+            </ExperienceDescription>
+          </Experience>
+        </TransitionSide>
+        <TransitionSide delay={0.6}>
+          <Experience
+            title="Trainee Data & Software Engineer"
+            company="Sigma Labs"
+            dates="Oct 2022 - Feb 2023"
+            url="https://www.sigmalabs.co.uk"
+            endOfTimeline={true}>
+            <ExperienceDescription
+              title="High-performance technology consultants across software, data,
                 and platform engineering.">
-            <Typography>
-              <li className="italic font-bold">Technical Excellence:</li>
+              <li className="italic font-bold">
+                {" "}
+                <Typography>Technical Excellence:</Typography>
+              </li>
               <div className="ml-6">
                 <li>
-                  Problem solving, systems thinking, technical communication,
-                  effective & clean code;
+                  <Typography>
+                    Problem solving, systems thinking, technical communication,
+                    effective & clean code;
+                  </Typography>
                 </li>
               </div>
               <li className="italic font-bold">
-                Professional High-Performance Delivery:
+                <Typography>Professional High-Performance Delivery:</Typography>
               </li>
               <ul>
                 <li>
-                  Developing fundamental transferrable skills and knowledge,
-                  across communication, behaviour, business basics & problem
-                  solving;
+                  <Typography>
+                    Developing fundamental transferrable skills and knowledge,
+                    across communication, behaviour, business basics & problem
+                    solving;
+                  </Typography>
                 </li>
               </ul>
-            </Typography>
 
-            <div className="mt-10">
-              <Typography variant="paragraph">
-                <span className="font-bold text-md">Skills: </span>
-                Agile Methodologies · HTML5 · REST APIs · SQL · Cascading Style
-                Sheets (CSS) · Git · Cypress · Jest · TypeScript · Next.js ·
-                Server Side JavaScript · Fastify · Node.js · React.js · Scss ·
-                Amazon Web Services (AWS) · Google Cloud Platform (GCP) ·
-                GraphQL · React Native
-              </Typography>
-            </div>
-          </ExperienceDescription>
-        </Experience>
+              <div className="mt-10">
+                <Typography variant="paragraph">
+                  <span className="font-bold text-md">Skills: </span>
+                  Agile Methodologies · HTML5 · REST APIs · SQL · Cascading
+                  Style Sheets (CSS) · Git · Cypress · Jest · TypeScript ·
+                  Next.js · Server Side JavaScript · Fastify · Node.js ·
+                  React.js · Scss · Amazon Web Services (AWS) · Google Cloud
+                  Platform (GCP) · GraphQL · React Native
+                </Typography>
+              </div>
+            </ExperienceDescription>
+          </Experience>
+        </TransitionSide>
       </Timeline>
     </>
   );

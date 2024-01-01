@@ -7,6 +7,9 @@ module.exports = withMT({
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      sans: ["Urbanist"],
+    },
     extend: {
       screens: {
         "lg+": "1312px",

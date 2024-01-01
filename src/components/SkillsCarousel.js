@@ -18,8 +18,7 @@ export function SkillsCarousel() {
           size="lg"
           ripple={false}
           onClick={handlePrev}
-          className="!absolute top-2/4 left-1 -translate-y-2/4  hover:bg-transparent active:bg-transparent"
-        >
+          className="!absolute top-2/4 left-1 -translate-y-2/4  hover:bg-transparent active:bg-transparent">
           <ChevronLeftIcon aria-hidden="false" className="h-6 w-6" />
         </Button>
       )}
@@ -30,12 +29,10 @@ export function SkillsCarousel() {
           size="lg"
           ripple={false}
           onClick={handleNext}
-          className="!absolute top-2/4 !right-1 -translate-y-2/4 hover:bg-transparent active:bg-transparent "
-        >
+          className="!absolute top-2/4 !right-1 -translate-y-2/4 hover:bg-transparent active:bg-transparent ">
           <ChevronRightIcon aria-hidden="false" className="h-6 w-6" />
         </Button>
-      )}
-    >
+      )}>
       <Image
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg"
         alt="React"
